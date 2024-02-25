@@ -1,7 +1,7 @@
 import React from "react";
 import '../styles/home.css'
 
-const home = (props) => {
+const Home = (props) => {
     return (
         <div className="home-page" >
             <div className="transparent-box">
@@ -16,4 +16,4 @@ const home = (props) => {
     )
 }
 
-export default home;
+export default Home;
