@@ -7,9 +7,9 @@ import Header from './components/header';
 import Footer from './components/footer';
 import Home from './pages/home'
 import About from './pages/about'
-import Show from './pages/show'
-import New from './pages/new'
-import Edit from './pages/edit'
+import ShowPosts from './pages/show'
+import NewPost from './pages/new'
+import EditPost from './pages/edit'
 // import Delete from './pages/delete'
 
 function App() {
@@ -86,10 +86,10 @@ useEffect(() => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/posts' element={<Show posts={posts} />} />
-        <Route path='/posts/new' element={<New createPost={createPost} setPosts={setPosts}/>} />
-        <Route path='/posts/:id/edit' element={<Edit posts={posts} editPost={editPost} />} />
-        <Route path='/posts/:id' element={<Delete posts={posts} deletePost={deletePost}/>} />
+        <Route path='/posts' element={<ShowPosts posts={posts} />} />
+        <Route path='/posts/new' element={<NewPost createPost={createPost} setPosts={setPosts}/>} />
+        <Route path='/posts/:id/edit' element={<EditPost posts={posts} editPost={editPost} />} />
+        <Route path='/posts/:id' element={<DeletePost posts={posts} deletePost={deletePost}/>} />
       </Routes>
       <Footer />
     </div>
