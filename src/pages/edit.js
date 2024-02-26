@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import '../styles/edit.css'
-import Button from '../components/button'
+// import Button from '../components/button'
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 

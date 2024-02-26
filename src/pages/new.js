@@ -9,7 +9,6 @@ const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 function NewPost({ createPost, setPosts }) {
   const navigate = useNavigate();
-  const { user } = useContext(AuthContext)
 //   const { post } = useContext(PostsContext)
   const [isClicked, setIsClicked] = useState(false);
 

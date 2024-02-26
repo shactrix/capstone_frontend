@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from '../../components/button';
-import '../../styles/container.css'
+import Button from './button';
+import '../styles/container.css'
 
 const Container = (props) => {
   const { post } = props;

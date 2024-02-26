@@ -3,8 +3,8 @@ import React from "react";
 import { useEffect, useState, useContext  } from "react"
 import { BrowserRouter as Router, Routes, Route, Navigate, useParams } from 'react-router-dom'
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './components/header';
-import Footer from './components/footer';
+// import Header from './components/header';
+// import Footer from './components/footer';
 import Home from './pages/home'
 import About from './pages/about'
 import ShowPosts from './pages/show'
@@ -45,16 +45,16 @@ const createPost = async (postData) => {
   }
 };
 
-const deletePost = async (id) => {
-  try {
-    await fetch(`${URL}/${id}`, {
-      method: 'DELETE',
-    });
-    fetchPosts();
-  } catch (error) {
-    console.error(error);
-  }
-};
+// const deletePost = async (id) => {
+//   try {
+//     await fetch(`${URL}/${id}`, {
+//       method: 'DELETE',
+//     });
+//     fetchPosts();
+//   } catch (error) {
+//     console.error(error);
+//   }
+// };
 
 const editPost = async (posts, id) => {
   try {
@@ -82,16 +82,16 @@ useEffect(() => {
     <>
     <Router>
     <div className='App'>
-      <Header />
+      {/* <Header /> */}
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/posts' element={<ShowPosts posts={posts} />} />
         <Route path='/posts/new' element={<NewPost createPost={createPost} setPosts={setPosts}/>} />
         <Route path='/posts/:id/edit' element={<EditPost posts={posts} editPost={editPost} />} />
-        <Route path='/posts/:id' element={<DeletePost posts={posts} deletePost={deletePost}/>} />
+        {/* <Route path='/posts/:id' element={<DeletePost posts={posts} deletePost={deletePost}/>} /> */}
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
     </Router>
         </>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Container from './components/container'
+import Container from '../components/container'
 import Button from '../components/button'
 import '../styles/show.css'
 
