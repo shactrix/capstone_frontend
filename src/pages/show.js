@@ -33,13 +33,13 @@ const ShowPosts = () => {
     <div className="show-page">
       <h1>Available RV's</h1>
       <Button to={`/`} label="Home" />
-      <Button to={`/posts/new`} label="Add" className='button' />
+      <Button to={`/rvs/new`} label="Add" className='button' />
       
       {Array.isArray(reversedPosts) &&
         reversedPosts.map((post) => (
           <div key={post._id} className='container'>
             <Container post={post}/>
-            <Button to={`/posts/${post._id}`} label="Delete" className='button' />
+            <Button to={`/rvs/${post._id}`} label="Delete" className='button' />
           </div>
         ))}
     </div>

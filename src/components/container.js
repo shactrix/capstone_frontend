@@ -17,7 +17,7 @@ const Container = (props) => {
                 <p className="post-image">{post.image}</p>
               </div>
               <div className="postButtons">
-                <Button to={`/posts/${post._id}/edit`} label="Edit" className='button' />
+                <Button to={`/rvs/${post._id}/edit`} label="Edit" className='button' />
               </div>
             </div>
           </div>

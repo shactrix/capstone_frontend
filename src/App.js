@@ -45,16 +45,16 @@ const createPost = async (postData) => {
   }
 };
 
-// const deletePost = async (id) => {
-//   try {
-//     await fetch(`${URL}/${id}`, {
-//       method: 'DELETE',
-//     });
-//     fetchPosts();
-//   } catch (error) {
-//     console.error(error);
-//   }
-// };
+const deletePost = async (id) => {
+  try {
+    await fetch(`${URL}/${id}`, {
+      method: 'DELETE',
+    });
+    fetchPosts();
+  } catch (error) {
+    console.error(error);
+  }
+};
 
 const editPost = async (posts, id) => {
   try {
@@ -86,10 +86,10 @@ useEffect(() => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/posts' element={<ShowPosts posts={posts} />} />
-        <Route path='/posts/new' element={<NewPost createPost={createPost} setPosts={setPosts}/>} />
-        <Route path='/posts/:id/edit' element={<EditPost posts={posts} editPost={editPost} />} />
-        {/* <Route path='/posts/:id' element={<DeletePost posts={posts} deletePost={deletePost}/>} /> */}
+        <Route path='/rvs' element={<ShowPosts posts={posts} />} />
+        <Route path='/rvs/new' element={<NewPost createPost={createPost} setPosts={setPosts}/>} />
+        <Route path='/rvs/:id/edit' element={<EditPost posts={posts} editPost={editPost} deletePost={deletePost}/>} />
+        {/* <Route path='/rvs/:id' element={<DeletePost posts={posts} deletePost={deletePost}/>} /> */}
       </Routes>
       <Footer />
     </div>

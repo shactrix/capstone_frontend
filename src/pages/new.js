@@ -31,7 +31,7 @@ function NewPost({ createPost, setPosts }) {
         text: '',
         image: '',
       });
-      navigate('/posts');
+      navigate('/rvs');
     } catch (error) {
       console.error(error);
     }

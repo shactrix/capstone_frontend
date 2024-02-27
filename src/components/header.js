@@ -23,10 +23,10 @@ const Header = (props) => {
                     <Link to='/about' className='link'>About</Link>
                 </Nav.Link>
                 <Nav.Link>
-                    <Link to='/show' className='link'>RV's</Link>
+                    <Link to='/rvs' className='link'>RV's</Link>
                 </Nav.Link>
                 <Nav.Link>
-                    <Link to='/new' className='link'>Add</Link>
+                    <Link to='/rvs/new' className='link'>Add</Link>
                 </Nav.Link>
             </div>
         </Nav>

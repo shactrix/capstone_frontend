@@ -50,38 +50,38 @@ function EditPost({ posts = [], editPost, deletePost }) {
     setPostData({ ...postData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!post) {
-      console.error("Post not found");
-      return;
-    }
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   if (!post) {
+  //     console.error("Post not found");
+  //     return;
+  //   }
+  //   try {
+  //     await editPost(postData, id);
+  //     navigate('/rvs');
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
+
+  const handleDelete = async () => {
     try {
-      await editPost(postData, id);
-      navigate('/posts');
+      await deletePost(post._id);
+      navigate('/rvs');
     } catch (error) {
       console.error(error);
     }
   };
-
-//   const handleDelete = async () => {
-//     try {
-//       await deletePost(post._id);
-//       navigate('/posts');
-//     } catch (error) {
-//       console.error(error);
-//     }
-//   };
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     try {
-//       await editPost(postData, post._id);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await editPost(postData, post._id);
       
-//       navigate('/posts');
-//     } catch (error) {
-//       console.error(error);
-//     }
-//   };
+      navigate('/rvs');
+    } catch (error) {
+      console.error(error);
+    }
+  };
   const toggleColor = () => {
     setIsClicked(!isClicked);
   };
@@ -116,8 +116,9 @@ function EditPost({ posts = [], editPost, deletePost }) {
           placeholder="Image URL"
           onChange={handleChange}
         /><br></br>
-        <button type="submit" className="button add" style={{width:'20vw', color:'black', marginTop:'3rem'}} role="button">Post</button>
+        <button type="submit" className="button add" style={{width:'20vw', color:'black', marginTop:'3rem'}} role="button">Submit</button>
       </form>
+      <button type="button" className="button delete" style={{width:'20vw', color:'black', marginTop:'3rem'}} onClick={handleDelete}>Delete</button>
       </div>
       </section>
     </div>
