@@ -39,7 +39,7 @@ const ShowPosts = () => {
         reversedPosts.map((post) => (
           <div key={post._id} className='container'>
             <Container post={post}/>
-            <Button to={`/rvs/${post._id}`} label="Delete" className='button' />
+            {/* <Button to={`/rvs/${post._id}`} label="Delete" className='button' /> */}
           </div>
         ))}
     </div>

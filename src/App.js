@@ -47,7 +47,7 @@ const createPost = async (postData) => {
 
 const deletePost = async (id) => {
   try {
-    await fetch(`${URL}/${id}`, {
+    await fetch(`${URL}${id}`, {
       method: 'DELETE',
     });
     fetchPosts();
@@ -58,7 +58,7 @@ const deletePost = async (id) => {
 
 const editPost = async (posts, id) => {
   try {
-    await fetch(`${URL}/${id}`, {
+    await fetch(`${URL}${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

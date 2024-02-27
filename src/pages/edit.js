@@ -10,9 +10,6 @@ function EditPost({ posts = [], editPost, deletePost }) {
   const navigate = useNavigate();
   const { id } = useParams()
   const [isClicked, setIsClicked] = useState(false);
-//   const params = useParams()
-//   const id = params.id
-//   const posts = props.posts
   const post = posts.find((p) => p._id === id)
 
   const [postData, setPostData] = useState(
@@ -64,14 +61,24 @@ function EditPost({ posts = [], editPost, deletePost }) {
   //   }
   // };
 
+  // const handleDelete = async () => {
+  //   try {
+  //     await deletePost(post._id);
+  //     navigate('/rvs');
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
   const handleDelete = async () => {
     try {
+      console.log("Deleting post with ID:", post._id);
       await deletePost(post._id);
       navigate('/rvs');
     } catch (error) {
       console.error(error);
     }
   };
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
