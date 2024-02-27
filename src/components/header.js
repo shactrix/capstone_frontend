@@ -10,30 +10,26 @@ const Header = (props) => {
         <Navbar className='nav'>
       <Link to='/' className='nav-link link'>
         <Navbar.Brand>
-            {/* <img className='logo' src="/RV-logo.png" alt='RV'></img> */}
+            <img className='logo' src="/rv-logo.png" alt='RV'></img>
         </Navbar.Brand>
       </Link>
       <Navbar.Collapse>
         <Nav>
             <div className='link-container'>
-              <NavDropdown title={<span>Home</span>} className='home-link'>
-                <div className='nav-dropdown'>
-                <NavDropdown.Item>
-                        <Link to="/" className='link'>Home</Link>
-                    </NavDropdown.Item>
-                    <NavDropdown.Item>
-                        <Link to='/about' className='link'>About</Link>
-                    </NavDropdown.Item>
-                    <NavDropdown.Item>
-                        <Link to='/show' className='link'>RV's</Link>
-                    </NavDropdown.Item>
-                    <NavDropdown.Item>
-                        <Link to='/new' className='link'>Add</Link>
-                    </NavDropdown.Item>
-                </div>
-              </NavDropdown>
+                <Nav.Link>
+                    <Link to="/" className='link'>Home</Link>
+                </Nav.Link>
+                <Nav.Link>
+                    <Link to='/about' className='link'>About</Link>
+                </Nav.Link>
+                <Nav.Link>
+                    <Link to='/show' className='link'>RV's</Link>
+                </Nav.Link>
+                <Nav.Link>
+                    <Link to='/new' className='link'>Add</Link>
+                </Nav.Link>
             </div>
-            </Nav>
+        </Nav>
       </Navbar.Collapse>
     </Navbar>
     );

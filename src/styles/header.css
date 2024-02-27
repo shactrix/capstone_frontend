@@ -1,0 +1,91 @@
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    background-color: rgb(217, 216, 250);
+    width: 100%;
+    z-index: 1;
+    font-size: 1rem;
+    height: 4rem;
+    backdrop-filter: blur(8px);
+    align-items: center;
+    justify-content: space-between; /* Added: Distribute items evenly along the navbar */
+    padding: 0 20px; /* Added: Add horizontal padding to the navbar */
+  }
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .nav-item {
+    flex-basis: auto;
+  }
+  
+  .nav-item a {
+    text-decoration: none;
+    color: #F1EBE4;
+  }
+  
+  .nav-item a:hover {
+    text-decoration: none;
+    color: rgb(77, 127, 96);
+  }
+  
+  .link {
+    text-decoration: none;
+    cursor: pointer;
+    padding-inline: 30px;
+    position: relative;
+    width: auto;
+  }
+  
+  .link-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  
+  .nav-item:hover .nav-dropdown {
+    display: block;
+  }
+  
+  .logo {
+    width: 20px;
+    height: auto;
+    filter: invert(100%);
+    mix-blend-mode: difference;
+    margin-right: 10px;
+    padding: 0;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .nav {
+      flex-direction: column; /* Navbar items stack vertically on small screens */
+      height: auto;
+      align-items: flex-start; /* Navbar items align to the left on small screens */
+      padding: 20px;
+    }
+  
+    .nav-link {
+      margin-bottom: 10px; /* Add some vertical spacing between navbar items on small screens */
+    }
+  }
+  
+  @media screen and (max-width: 1240px) {
+    .nav {
+      height: auto;
+      align-items: center;
+      padding: 20px;
+    }
+  
+    .nav-item {
+      flex-basis: 100%;
+      text-align: center;
+      padding: 10px;
+      font-size: 16px;
+    }
+  }
+  
+  

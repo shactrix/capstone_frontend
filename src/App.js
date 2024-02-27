@@ -2,9 +2,9 @@ import './App.css';
 import React from "react";
 import { useEffect, useState, useContext  } from "react"
 import { BrowserRouter as Router, Routes, Route, Navigate, useParams } from 'react-router-dom'
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import Header from './components/header';
-// import Footer from './components/footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/header';
+import Footer from './components/footer';
 import Home from './pages/home'
 import About from './pages/about'
 import ShowPosts from './pages/show'
@@ -82,7 +82,7 @@ useEffect(() => {
     <>
     <Router>
     <div className='App'>
-      {/* <Header /> */}
+      <Header />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
@@ -91,7 +91,7 @@ useEffect(() => {
         <Route path='/posts/:id/edit' element={<EditPost posts={posts} editPost={editPost} />} />
         {/* <Route path='/posts/:id' element={<DeletePost posts={posts} deletePost={deletePost}/>} /> */}
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </div>
     </Router>
         </>
