@@ -1,0 +1,60 @@
+.about {
+    background-image: linear-gradient(rgb(17, 55, 9), rgb(12, 70, 29));
+    background-size: cover;
+    min-height: 100vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about h2 {
+    margin: 0;
+    padding: 2rem;
+  }
+  p {
+    padding: 1rem;
+  }
+  .about-content {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0 0 0 5rem;
+    justify-content: space-around;
+  }
+  
+  .about-text {
+    color: rgb(212, 206, 206);
+    font-size: 1.3em;
+    width: 600px;
+    margin: 3rem 10rem 3rem 0;
+    float: left;
+  }
+  
+  .bg {
+    width: 40em;
+    height: 40em;
+    border: none;
+    border-radius: 50%;
+    background-color: #093405;
+    margin: 3rem 0 3rem 0;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  /* .home-button {
+    background-color: #555555;
+    color: rgb(212, 206, 206) !important;
+  }
+  .home-button a:hover {
+    color: #093405;
+  }
+  .home-button button {
+    color: rgb(212, 206, 206) !important;
+  } */
+  .aboutimg {
+    position: absolute;
+    margin-top: -55.5em;
+    margin-left: 2em;
+  }
+  
+ 
