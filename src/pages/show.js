@@ -32,7 +32,7 @@ const ShowPosts = () => {
   return (
     <div className="show-page">
       <h1>Available RV's</h1>
-      <Button to={`/`} label="Home" />
+      {/* <Button to={`/`} label="Home" /> */}
       <Button to={`/rvs/new`} label="Add" className='button' />
       
       {Array.isArray(reversedPosts) &&

@@ -8,15 +8,14 @@
     text-align: center;
   }
   
-  .show-page .container {
+   .show-page .container {
     margin-top: 1rem;
     padding-left: 3rem !important;
     padding-right: 1rem !important;
     padding-top: 1rem;
-    padding-bottom: 1rem;
-    background-color: hsl(28, 34%, 60%);
-    border-radius: 8px;
+    padding-bottom: 1rem; 
+    /* background-color: hsl(122, 85%, 68%);
+    border-radius: 8px; */
     width: 300px;
     line-height: 1.2;
   }
-  

@@ -10,6 +10,7 @@ import About from './pages/about'
 import ShowPosts from './pages/show'
 import NewPost from './pages/new'
 import EditPost from './pages/edit'
+import seedData from './components/seed'
 // import Delete from './pages/delete'
 
 function App() {
@@ -19,16 +20,33 @@ const [posts, setPosts] = useState([]);
 const URL = process.env.REACT_APP_BASE_URL;
 console.log(URL)
 
-
 const fetchPosts = async () => {
   try {
     const response = await fetch(`${URL}`);
     const data = await response.json();
-    setPosts(data.data);
+    console.log("API Response:", data); // Add this line for debugging
+    if (data && data.data && Array.isArray(data.data)) {
+      setPosts(data.data);
+    } else {
+      console.log("Using seed data."); // Add this line for debugging
+      setPosts(seedData);
+    }
   } catch (error) {
-    console.error(error);
+    console.error("Fetch error:", error); // Add this line for debugging
+    setPosts(seedData);
   }
 };
+
+
+// const fetchPosts = async () => {
+//   try {
+//     const response = await fetch(`${URL}`);
+//     const data = await response.json();
+//     setPosts(data.data);
+//   } catch (error) {
+//     console.error(error);
+//   }
+// };
 
 const createPost = async (postData) => {
   try {
@@ -72,11 +90,12 @@ const editPost = async (posts, id) => {
 };
 
 useEffect(() => {
-  fetchPosts();
+  setPosts(seedData);
 }, []);
 
-
-
+useEffect(() => {
+  fetchPosts();
+}, []);
 
   return (
     <>
